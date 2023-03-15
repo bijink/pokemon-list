@@ -3,7 +3,7 @@ import Card from "../card/Card";
 import "./List.style.css";
 
 const List = () => {
-  let [pokemonList, setPokemonList] = useState([]);
+  const [pokemonList, setPokemonList] = useState([]);
 
   const getPokemonList = async (offsetValue) => {
     await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offsetValue}`)
@@ -43,6 +43,7 @@ const List = () => {
       {pokemonList.map((poke) => {
         return <Card key={poke.id} pokemon={poke} />;
       })}
+      <p className="list__loading">Loading...</p>
     </div>
   );
 };
