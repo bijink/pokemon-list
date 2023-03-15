@@ -1,0 +1,14 @@
+.header {
+  background-color: rgba(92, 92, 92, 0.712);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 15px;
+}
+.header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.8rem 0;
+  font-size: 40px;
+}

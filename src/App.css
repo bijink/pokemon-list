@@ -3,13 +3,16 @@
   padding: 0;
 }
 
-.App {
+.app {
   width: 100%;
-  display: flex;
 }
-.App > :nth-child(1) {
+.app .app__main {
+  display: flex;
+  padding-top: 4.5rem;
+}
+.app .app__main > :nth-child(1) {
   width: 60%;
 }
-.App > :nth-child(2) {
+.app .app__main > :nth-child(2) {
   width: calc(40% - 3rem);
 }
