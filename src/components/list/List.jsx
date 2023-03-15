@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Card from "../card/Card";
 import "./List.style.css";
 
 const List = () => {
@@ -27,7 +28,9 @@ const List = () => {
       window.innerHeight + document.documentElement.scrollTop ===
       document.documentElement.offsetHeight
     ) {
-      getPokemonList(pokemonList.length);
+      setTimeout(() => {
+        getPokemonList(pokemonList.length);
+      }, 1000);
     }
   };
 
@@ -35,17 +38,15 @@ const List = () => {
     !pokemonList.length && getPokemonList(0);
   }, [pokemonList.length]);
 
+  useEffect(() => {
+    // console.log(pokemonList);
+  }, [pokemonList]);
+
   return (
     <div className="list">
-      <div style={{ backgroundColor: "#ff0" }}>
-        {pokemonList.map((obj, i) => {
-          return (
-            <h1 key={i}>
-              {obj.id} - {obj.name}
-            </h1>
-          );
-        })}
-      </div>
+      {pokemonList.map((poke) => {
+        return <Card key={poke.id} pokemon={poke} />;
+      })}
     </div>
   );
 };
