@@ -1,0 +1,37 @@
+.details {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details .details--title {
+  font-size: 30px;
+  font-weight: 500;
+}
+.details .details--title::first-letter {
+  text-transform: uppercase;
+}
+.details .details--img {
+  height: 180px;
+  width: 180px;
+  padding: 1rem 0;
+}
+.details .details__text {
+  width: 40%;
+}
+.details .details__text p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.details .details__text p::first-letter {
+  text-transform: uppercase;
+}
+.details .details__text .details__text--section-title {
+  font-weight: 400;
+  font-size: 17px;
+}

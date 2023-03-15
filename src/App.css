@@ -5,10 +5,11 @@
 
 .App {
   width: 100%;
+  display: flex;
 }
-.App:nth-child(1) {
+.App > :nth-child(1) {
   width: 60%;
 }
-.App:nth-child(2) {
-  width: 40%;
+.App > :nth-child(2) {
+  width: calc(40% - 3rem);
 }

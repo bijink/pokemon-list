@@ -38,10 +38,6 @@ const List = () => {
     !pokemonList.length && getPokemonList(0);
   }, [pokemonList.length]);
 
-  useEffect(() => {
-    // console.log(pokemonList);
-  }, [pokemonList]);
-
   return (
     <div className="list">
       {pokemonList.map((poke) => {
